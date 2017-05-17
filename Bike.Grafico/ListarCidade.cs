@@ -21,5 +21,13 @@ namespace Bike.Grafico
         {
 
         }
+
+        private void btAdicionar_Click(object sender, EventArgs e)
+        {
+            TelaAdicionarCidade cadastro = new TelaAdicionarCidade();
+            cadastro.MdiParent = this.MdiParent;
+            cadastro.Show();
+
+        }
     }
 }
