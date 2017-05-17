@@ -19,7 +19,9 @@ namespace Bike.Grafico
 
         private void btAdicionar_Click(object sender, EventArgs e)
         {
-
+            TelaCadastroAluguel cadastro = new TelaCadastroAluguel();
+            cadastro.MdiParent = this.MdiParent;
+            cadastro.Show();
         }
     }
 }

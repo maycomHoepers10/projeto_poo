@@ -78,6 +78,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaAdicionarCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAdicionarCidade.Designer.cs">
+      <DependentUpon>TelaAdicionarCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaAdicionarLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAdicionarLocacao.Designer.cs">
+      <DependentUpon>TelaAdicionarLocacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCadastroAluguel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadastroAluguel.Designer.cs">
+      <DependentUpon>TelaCadastroAluguel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCadastroBicicleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadastroBicicleta.Designer.cs">
+      <DependentUpon>TelaCadastroBicicleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadastroCliente.Designer.cs">
+      <DependentUpon>TelaCadastroCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +138,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TelaAdicionarCidade.resx">
+      <DependentUpon>TelaAdicionarCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAdicionarLocacao.resx">
+      <DependentUpon>TelaAdicionarLocacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadastroAluguel.resx">
+      <DependentUpon>TelaCadastroAluguel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadastroBicicleta.resx">
+      <DependentUpon>TelaCadastroBicicleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadastroCliente.resx">
+      <DependentUpon>TelaCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
