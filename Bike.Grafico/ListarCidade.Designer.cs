@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgListarCidade = new System.Windows.Forms.DataGridView();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.btAtualizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListarCidade)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgListarCidade
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(650, 264);
-            this.dataGridView1.TabIndex = 0;
+            this.dgListarCidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgListarCidade.Location = new System.Drawing.Point(29, 22);
+            this.dgListarCidade.Name = "dgListarCidade";
+            this.dgListarCidade.Size = new System.Drawing.Size(650, 264);
+            this.dgListarCidade.TabIndex = 0;
+           // this.dgListarCidade.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarCidade_CellContentClick);
             // 
             // btAdicionar
             // 
@@ -68,18 +69,18 @@
             this.ClientSize = new System.Drawing.Size(704, 395);
             this.Controls.Add(this.btAtualizar);
             this.Controls.Add(this.btAdicionar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgListarCidade);
             this.Name = "ListarCidade";
             this.Text = "ListarCidade";
             this.Load += new System.EventHandler(this.ListarCidade_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListarCidade)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgListarCidade;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Button btAtualizar;
     }

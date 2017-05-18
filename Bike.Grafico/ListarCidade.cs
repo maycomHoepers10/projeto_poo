@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bike.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,15 @@ namespace Bike.Grafico
             InitializeComponent();
         }
 
+        private void AtualizarDados()
+        {
+            List<Cidade> cidades = Util.Gerenciador.CidadesCadastradas();
+            dgListarCidade.DataSource = cidades;
+        }
+
         private void ListarCidade_Load(object sender, EventArgs e)
         {
-
+            AtualizarDados();
         }
 
         private void btAdicionar_Click(object sender, EventArgs e)
@@ -29,5 +36,11 @@ namespace Bike.Grafico
             cadastro.Show();
 
         }
+
+        private void dgListarCidade_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

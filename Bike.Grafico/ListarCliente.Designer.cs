@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgListarCliente = new System.Windows.Forms.DataGridView();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.btAtualizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListarCliente)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgListarCliente
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(724, 291);
-            this.dataGridView1.TabIndex = 0;
+            this.dgListarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgListarCliente.Location = new System.Drawing.Point(12, 0);
+            this.dgListarCliente.Name = "dgListarCliente";
+            this.dgListarCliente.Size = new System.Drawing.Size(724, 291);
+            this.dgListarCliente.TabIndex = 0;
+            this.dgListarCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarCliente_CellContentClick);
             // 
             // btAdicionar
             // 
@@ -68,17 +69,17 @@
             this.ClientSize = new System.Drawing.Size(748, 402);
             this.Controls.Add(this.btAtualizar);
             this.Controls.Add(this.btAdicionar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgListarCliente);
             this.Name = "ListarCliente";
             this.Text = "ListarCliente";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListarCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgListarCliente;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Button btAtualizar;
     }

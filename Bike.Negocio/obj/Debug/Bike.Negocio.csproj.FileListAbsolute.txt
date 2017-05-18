@@ -1,0 +1,5 @@
+C:\Users\Acer\Source\Repos\projeto_poo\Bike.Negocio\bin\Debug\Bike.Negocio.dll
+C:\Users\Acer\Source\Repos\projeto_poo\Bike.Negocio\bin\Debug\Bike.Negocio.pdb
+C:\Users\Acer\Source\Repos\projeto_poo\Bike.Negocio\obj\Debug\Bike.Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Source\Repos\projeto_poo\Bike.Negocio\obj\Debug\Bike.Negocio.dll
+C:\Users\Acer\Source\Repos\projeto_poo\Bike.Negocio\obj\Debug\Bike.Negocio.pdb
