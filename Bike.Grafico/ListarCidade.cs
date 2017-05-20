@@ -34,7 +34,6 @@ namespace Bike.Grafico
             TelaAdicionarCidade cadastro = new TelaAdicionarCidade();
             cadastro.MdiParent = this.MdiParent;
             cadastro.Show();
-
         }
 
         private void dgListarCidade_CellContentClick(object sender, DataGridViewCellEventArgs e)
