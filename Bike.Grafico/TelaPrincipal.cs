@@ -138,5 +138,10 @@ namespace Bike.Grafico
             tela.MdiParent = this;
             tela.Show();
         }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

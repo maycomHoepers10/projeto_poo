@@ -6,7 +6,12 @@ namespace Bike.Grafico
 {
     public class Gerenciador
     {
-        internal List<Cidade> CidadesCadastradas()
+        internal List<Cidade> BicicletasCadastradas()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal List<bicicleta> bicicletasCadastradas()
         {
             throw new NotImplementedException();
         }

@@ -60,6 +60,7 @@
             this.btAtualizar.TabIndex = 2;
             this.btAtualizar.Text = "Atualizar";
             this.btAtualizar.UseVisualStyleBackColor = true;
+            this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
             // 
             // ListarBilicleta
             // 
