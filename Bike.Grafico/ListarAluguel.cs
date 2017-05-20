@@ -23,5 +23,10 @@ namespace Bike.Grafico
             cadastro.MdiParent = this.MdiParent;
             cadastro.Show();
         }
+
+        private void btAtualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

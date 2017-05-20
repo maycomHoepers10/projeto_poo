@@ -60,6 +60,7 @@
             this.btAtualizar.TabIndex = 2;
             this.btAtualizar.Text = "atualizar";
             this.btAtualizar.UseVisualStyleBackColor = true;
+            this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
             // 
             // ListarAluguel
             // 

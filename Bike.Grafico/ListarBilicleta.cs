@@ -12,6 +12,8 @@ namespace Bike.Grafico
 {
     public partial class ListarBilicleta : Form
     {
+        private object dgListarBicicleta;
+
         public ListarBilicleta()
         {
             InitializeComponent();
@@ -22,6 +24,17 @@ namespace Bike.Grafico
             TelaCadastroBicicleta cadastro = new TelaCadastroBicicleta();
             cadastro.MdiParent = this.MdiParent;
             cadastro.Show();
+        }
+
+        private void AtualizarDados()
+        {
+            List<bicicleta> bicicletas = Util.Gerenciador.BicicletasCadastradas();
+            dgListarBicicleta.DataSource = bicicletas;
+        }
+
+        private void btAtualizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
