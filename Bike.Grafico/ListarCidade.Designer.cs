@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgCidades = new System.Windows.Forms.DataGridView();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.btAtualizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btAlterar = new System.Windows.Forms.Button();
+            this.btDeletar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCidades)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgCidades
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(650, 264);
-            this.dataGridView1.TabIndex = 0;
+            this.dgCidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCidades.Location = new System.Drawing.Point(29, 22);
+            this.dgCidades.Name = "dgCidades";
+            this.dgCidades.Size = new System.Drawing.Size(650, 264);
+            this.dgCidades.TabIndex = 0;
             // 
             // btAdicionar
             // 
@@ -50,6 +52,7 @@
             this.btAdicionar.TabIndex = 1;
             this.btAdicionar.Text = "Adicionar";
             this.btAdicionar.UseVisualStyleBackColor = true;
+            this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click);
             // 
             // btAtualizar
             // 
@@ -60,26 +63,48 @@
             this.btAtualizar.Text = "Atualizar";
             this.btAtualizar.UseVisualStyleBackColor = true;
             // 
+            // btAlterar
+            // 
+            this.btAlterar.Location = new System.Drawing.Point(122, 306);
+            this.btAlterar.Name = "btAlterar";
+            this.btAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btAlterar.TabIndex = 3;
+            this.btAlterar.Text = "Alterar";
+            this.btAlterar.UseVisualStyleBackColor = true;
+            // 
+            // btDeletar
+            // 
+            this.btDeletar.Location = new System.Drawing.Point(215, 306);
+            this.btDeletar.Name = "btDeletar";
+            this.btDeletar.Size = new System.Drawing.Size(75, 23);
+            this.btDeletar.TabIndex = 4;
+            this.btDeletar.Text = "Deletar";
+            this.btDeletar.UseVisualStyleBackColor = true;
+            // 
             // ListarCidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 395);
+            this.ClientSize = new System.Drawing.Size(704, 341);
+            this.Controls.Add(this.btDeletar);
+            this.Controls.Add(this.btAlterar);
             this.Controls.Add(this.btAtualizar);
             this.Controls.Add(this.btAdicionar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgCidades);
             this.Name = "ListarCidade";
             this.Text = "ListarCidade";
             this.Load += new System.EventHandler(this.ListarCidade_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCidades)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgCidades;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Button btAtualizar;
+        private System.Windows.Forms.Button btAlterar;
+        private System.Windows.Forms.Button btDeletar;
     }
 }
