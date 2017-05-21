@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgBicicletas = new System.Windows.Forms.DataGridView();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.btAtualizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBicicletas)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgBicicletas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(753, 269);
-            this.dataGridView1.TabIndex = 0;
+            this.dgBicicletas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgBicicletas.Location = new System.Drawing.Point(12, 25);
+            this.dgBicicletas.Name = "dgBicicletas";
+            this.dgBicicletas.Size = new System.Drawing.Size(753, 269);
+            this.dgBicicletas.TabIndex = 0;
             // 
             // btAdicionar
             // 
@@ -60,26 +62,50 @@
             this.btAtualizar.TabIndex = 2;
             this.btAtualizar.Text = "Atualizar";
             this.btAtualizar.UseVisualStyleBackColor = true;
+            this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(106, 321);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Alterar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(201, 321);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Deletar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // ListarBilicleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 398);
+            this.ClientSize = new System.Drawing.Size(777, 364);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btAtualizar);
             this.Controls.Add(this.btAdicionar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgBicicletas);
             this.Name = "ListarBilicleta";
             this.Text = "ListarBilicleta";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ListarBilicleta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgBicicletas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgBicicletas;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Button btAtualizar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

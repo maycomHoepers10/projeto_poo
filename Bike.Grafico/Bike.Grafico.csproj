@@ -114,6 +114,7 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util.cs" />
     <EmbeddedResource Include="ListarAluguel.resx">
       <DependentUpon>ListarAluguel.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +169,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bike.Negocio\Bike.Negocio.csproj">
+      <Project>{3D93BCC6-AB74-442D-9795-E0891450AEB9}</Project>
+      <Name>Bike.Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
