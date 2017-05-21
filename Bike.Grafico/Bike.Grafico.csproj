@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gerenciador.cs" />
     <Compile Include="ListarAluguel.cs">
       <SubType>Form</SubType>
     </Compile>

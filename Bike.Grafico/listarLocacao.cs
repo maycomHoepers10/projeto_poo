@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bike.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,32 @@ namespace Bike.Grafico
             InitializeComponent();
         }
 
+        private void CarregarDados()
+        {
+            List<Local> locais = Util.Gerenciador.LocaisCadastrados();
+            dgLocacoes.DataSource = locais;
+        }
+
+        private void btAtualizar_Click(object sender, EventArgs e)
+        {
+            CarregarDados();
+        }
+
+        private void listarLocacao_Load(object sender, EventArgs e)
+        {
+            CarregarDados();
+        }
+
         private void btAdicionar_Click(object sender, EventArgs e)
         {
             TelaAdicionarLocacao cadastro = new TelaAdicionarLocacao();
             cadastro.MdiParent = this.MdiParent;
             cadastro.Show();
+        }
+        
+        private void Tela_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CarregarDados();
         }
     }
 }

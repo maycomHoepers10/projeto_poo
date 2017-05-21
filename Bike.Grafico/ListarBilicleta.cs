@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bike.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,22 @@ namespace Bike.Grafico
             InitializeComponent();
         }
 
+        private void CarregarDados()
+        {
+            List<Bicicleta> bicicletas = Util.Gerenciador.BicicletasCadastradas();
+            dgBicicletas.DataSource = bicicletas;
+        }
+
+        private void ListarBilicleta_Load(object sender, EventArgs e)
+        {
+            CarregarDados();
+        }
+
+        private void btAtualizar_Click(object sender, EventArgs e)
+        {
+            CarregarDados();
+        }
+
         private void btAdicionar_Click(object sender, EventArgs e)
         {
             TelaCadastroBicicleta cadastro = new TelaCadastroBicicleta();
@@ -26,15 +43,9 @@ namespace Bike.Grafico
             cadastro.Show();
         }
 
-        private void AtualizarDados()
+        private void Tela_FomClosed(object sender, FormClosedEventArgs e)
         {
-            List<bicicleta> bicicletas = Util.Gerenciador.BicicletasCadastradas();
-            dgListarBicicleta.DataSource = bicicletas;
-        }
-
-        private void btAtualizar_Click(object sender, EventArgs e)
-        {
-
+            CarregarDados();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bike.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,21 @@ namespace Bike.Grafico
             InitializeComponent();
         }
 
+        private void CarregarDados()
+        {
+            List<Cliente> clientes = Util.Gerenciador.ClientesCadastrados();
+            dgClientes.DataSource = clientes;
+        }
 
+        private void ListarCliente_Load(object sender, EventArgs e)
+        {
+            CarregarDados();
+        }
+
+        private void btAtualizar_Click(object sender, EventArgs e)
+        {
+            CarregarDados();
+        }
 
         private void btAdicionar_Click(object sender, EventArgs e)
         {
@@ -26,9 +41,9 @@ namespace Bike.Grafico
             cadastro.Show();
         }
 
-        private void dgListarCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Tela_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            CarregarDados();
         }
     }
 }

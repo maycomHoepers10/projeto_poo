@@ -28,22 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgListarCliente = new System.Windows.Forms.DataGridView();
+            this.dgClientes = new System.Windows.Forms.DataGridView();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.btAtualizar = new System.Windows.Forms.Button();
             this.btAlterar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgListarCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgListarCliente
+            // dgClientes
             // 
-            this.dgListarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgListarCliente.Location = new System.Drawing.Point(12, 0);
-            this.dgListarCliente.Name = "dgListarCliente";
-            this.dgListarCliente.Size = new System.Drawing.Size(724, 291);
-            this.dgListarCliente.TabIndex = 0;
-            this.dgListarCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarCliente_CellContentClick);
+            this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgClientes.Location = new System.Drawing.Point(12, 0);
+            this.dgClientes.Name = "dgClientes";
+            this.dgClientes.Size = new System.Drawing.Size(724, 291);
+            this.dgClientes.TabIndex = 0;
             // 
             // btAdicionar
             // 
@@ -63,6 +62,7 @@
             this.btAtualizar.TabIndex = 2;
             this.btAtualizar.Text = "Atualizar";
             this.btAtualizar.UseVisualStyleBackColor = true;
+            this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
             // 
             // btAlterar
             // 
@@ -86,22 +86,23 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 402);
+            this.ClientSize = new System.Drawing.Size(748, 360);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAlterar);
             this.Controls.Add(this.btAtualizar);
             this.Controls.Add(this.btAdicionar);
-            this.Controls.Add(this.dgListarCliente);
+            this.Controls.Add(this.dgClientes);
             this.Name = "ListarCliente";
             this.Text = "ListarCliente";
-            ((System.ComponentModel.ISupportInitialize)(this.dgListarCliente)).EndInit();
+            this.Load += new System.EventHandler(this.ListarCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgListarCliente;
+        private System.Windows.Forms.DataGridView dgClientes;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Button btAtualizar;
         private System.Windows.Forms.Button btAlterar;

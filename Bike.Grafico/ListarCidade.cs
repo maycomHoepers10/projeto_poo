@@ -20,8 +20,8 @@ namespace Bike.Grafico
 
         private void AtualizarDados()
         {
-            List<Cidade> cidades = Util.Gerenciador.BicicletasCadastradas();
-            dgListarCidade.DataSource = cidades;
+            List<Cidade> cidades = Util.Gerenciador.CidadesCadastradas();
+            dgCidades.DataSource = cidades;
         }
 
         private void ListarCidade_Load(object sender, EventArgs e)
