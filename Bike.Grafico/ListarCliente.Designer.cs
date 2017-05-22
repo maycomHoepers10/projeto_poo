@@ -33,20 +33,21 @@
             this.btAtualizar = new System.Windows.Forms.Button();
             this.btAlterar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // dgClientes
             // 
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Location = new System.Drawing.Point(12, 0);
+            this.dgClientes.Location = new System.Drawing.Point(12, 53);
             this.dgClientes.Name = "dgClientes";
-            this.dgClientes.Size = new System.Drawing.Size(724, 291);
+            this.dgClientes.Size = new System.Drawing.Size(423, 291);
             this.dgClientes.TabIndex = 0;
             // 
             // btAdicionar
             // 
-            this.btAdicionar.Location = new System.Drawing.Point(12, 328);
+            this.btAdicionar.Location = new System.Drawing.Point(12, 364);
             this.btAdicionar.Name = "btAdicionar";
             this.btAdicionar.Size = new System.Drawing.Size(75, 23);
             this.btAdicionar.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // btAtualizar
             // 
-            this.btAtualizar.Location = new System.Drawing.Point(661, 328);
+            this.btAtualizar.Location = new System.Drawing.Point(360, 364);
             this.btAtualizar.Name = "btAtualizar";
             this.btAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btAtualizar.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // btAlterar
             // 
-            this.btAlterar.Location = new System.Drawing.Point(106, 328);
+            this.btAlterar.Location = new System.Drawing.Point(104, 364);
             this.btAlterar.Name = "btAlterar";
             this.btAlterar.Size = new System.Drawing.Size(75, 23);
             this.btAlterar.TabIndex = 3;
@@ -75,18 +76,29 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(206, 328);
+            this.btCancelar.Location = new System.Drawing.Point(200, 364);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 4;
-            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.Text = "Deletar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(132, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(181, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Clientes Cadastrados";
             // 
             // ListarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 360);
+            this.ClientSize = new System.Drawing.Size(455, 399);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAlterar);
             this.Controls.Add(this.btAtualizar);
@@ -97,6 +109,7 @@
             this.Load += new System.EventHandler(this.ListarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -107,5 +120,6 @@
         private System.Windows.Forms.Button btAtualizar;
         private System.Windows.Forms.Button btAlterar;
         private System.Windows.Forms.Button btCancelar;
+        private System.Windows.Forms.Label label1;
     }
 }

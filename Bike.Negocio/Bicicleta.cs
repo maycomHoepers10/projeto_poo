@@ -13,5 +13,6 @@ namespace Bike.Negocio
         public String Modelo { get; set; }
         public DateTime DataCompra { get; set; }
         public String Tipo { get; set; }
+        public Local Local { get; set; }
     }
 }

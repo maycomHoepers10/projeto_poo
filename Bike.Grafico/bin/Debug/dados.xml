@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DadosGravador xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Clientes>
+    <Cliente>
+      <CPF>108-585-285-05</CPF>
+      <Nome>Maria Fagundes</Nome>
+      <Email>marifafa@gmail.com</Email>
+    </Cliente>
+    <Cliente>
+      <CPF>188.488.958-98</CPF>
+      <Nome>José Philips</Nome>
+      <Email>jose_philips@gmail.com</Email>
+    </Cliente>
+  </Clientes>
+  <Bicicletas>
+    <Bicicleta>
+      <Cod>1</Cod>
+      <Marca>oo</Marca>
+      <Modelo>dd</Modelo>
+      <DataCompra>2015-01-10T00:10:00</DataCompra>
+      <Tipo>Normal</Tipo>
+    </Bicicleta>
+  </Bicicletas>
+  <Cidades>
+    <Cidade>
+      <Cod>1</Cod>
+      <Nome>Joinville</Nome>
+    </Cidade>
+    <Cidade>
+      <Cod>2</Cod>
+      <Nome>São Paulo</Nome>
+    </Cidade>
+    <Cidade>
+      <Cod>3</Cod>
+      <Nome>Florianópolis</Nome>
+    </Cidade>
+    <Cidade>
+      <Cod>4</Cod>
+      <Nome>Imbituba</Nome>
+    </Cidade>
+    <Cidade>
+      <Cod>5</Cod>
+      <Nome>Imaruí</Nome>
+    </Cidade>
+  </Cidades>
+  <Locais>
+    <Local>
+      <Cod>0</Cod>
+      <Codigo>1</Codigo>
+      <nmLocal>Praia do Rosa</nmLocal>
+      <Endereco>Imbi 33</Endereco>
+      <Cidade>
+        <Cod>5</Cod>
+        <Nome>Imaruí</Nome>
+      </Cidade>
+      <vlBikeNormal>15</vlBikeNormal>
+      <vlBikeEletrica>30</vlBikeEletrica>
+    </Local>
+  </Locais>
+  <Alugueis />
+</DadosGravador>

@@ -13,11 +13,19 @@ namespace Bike.Grafico
 {
     public partial class ListarBilicleta : Form
     {
-        private object dgListarBicicleta;
 
         public ListarBilicleta()
         {
             InitializeComponent();
+            ConfigurarDg();
+        }
+
+        private void ConfigurarDg()
+        {
+            dgBicicletas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgBicicletas.ColumnCount = 5;
+            dgBicicletas.ColumnHeadersVisible = true;
+            dgBicicletas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void CarregarDados()
@@ -39,6 +47,7 @@ namespace Bike.Grafico
         private void btAdicionar_Click(object sender, EventArgs e)
         {
             TelaCadastroBicicleta cadastro = new TelaCadastroBicicleta();
+            cadastro.FormClosed += Tela_FomClosed;
             cadastro.MdiParent = this.MdiParent;
             cadastro.Show();
         }
