@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bike.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,35 @@ namespace Bike.Grafico
             InitializeComponent();
         }
 
-        private void TelaCadastroCliente_Load(object sender, EventArgs e)
+        public void LimparCampos()
         {
+            tbCpf.Text = "";
+            tbNome.Text = "";
+            tbEmail.Text = "";
+        }
 
+        private void btSalvar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cliente cliente = new Cliente();
+                cliente.CPF = tbCpf.Text;
+                cliente.Nome = tbNome.Text;
+                cliente.Email = tbEmail.Text;
+                Util.Gerenciador.AdicionarCliente(cliente);
+
+                LimparCampos();
+                MessageBox.Show("Cliente adicionado com sucesso!");
+                this.Close();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

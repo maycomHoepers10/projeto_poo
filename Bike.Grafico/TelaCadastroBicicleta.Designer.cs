@@ -34,30 +34,31 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbMarca = new System.Windows.Forms.TextBox();
+            this.tbModelo = new System.Windows.Forms.TextBox();
+            this.tbCod = new System.Windows.Forms.TextBox();
             this.btSalvar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.tbData = new System.Windows.Forms.TextBox();
+            this.rdNormal = new System.Windows.Forms.RadioButton();
+            this.rdEletrica = new System.Windows.Forms.RadioButton();
+            this.cbLocais = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 3);
+            this.label1.Location = new System.Drawing.Point(80, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 13);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo da Bicicleta";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Codigo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 34);
+            this.label2.Location = new System.Drawing.Point(81, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 1;
@@ -66,7 +67,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 70);
+            this.label3.Location = new System.Drawing.Point(76, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 2;
@@ -75,7 +76,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 109);
+            this.label4.Location = new System.Drawing.Point(36, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 13);
             this.label4.TabIndex = 3;
@@ -84,96 +85,116 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 151);
+            this.label5.Location = new System.Drawing.Point(89, 192);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 13);
+            this.label5.Size = new System.Drawing.Size(28, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Eletrica ou Normal";
+            this.label5.Text = "Tipo";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(49, 190);
+            this.label6.Location = new System.Drawing.Point(25, 231);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.Size = new System.Drawing.Size(93, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Locação";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.Text = "Local de Locação";
             // 
-            // textBox1
+            // tbMarca
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 6;
+            this.tbMarca.Location = new System.Drawing.Point(124, 66);
+            this.tbMarca.Name = "tbMarca";
+            this.tbMarca.Size = new System.Drawing.Size(205, 20);
+            this.tbMarca.TabIndex = 6;
             // 
-            // textBox2
+            // tbModelo
             // 
-            this.textBox2.Location = new System.Drawing.Point(102, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 20);
-            this.textBox2.TabIndex = 7;
+            this.tbModelo.Location = new System.Drawing.Point(124, 109);
+            this.tbModelo.Name = "tbModelo";
+            this.tbModelo.Size = new System.Drawing.Size(205, 20);
+            this.tbModelo.TabIndex = 7;
             // 
-            // textBox3
+            // tbCod
             // 
-            this.textBox3.Location = new System.Drawing.Point(102, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 20);
-            this.textBox3.TabIndex = 8;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(102, 148);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 20);
-            this.textBox4.TabIndex = 9;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(102, 187);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(149, 20);
-            this.textBox5.TabIndex = 10;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(102, 0);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(149, 20);
-            this.textBox6.TabIndex = 11;
+            this.tbCod.Location = new System.Drawing.Point(126, 30);
+            this.tbCod.Name = "tbCod";
+            this.tbCod.Size = new System.Drawing.Size(203, 20);
+            this.tbCod.TabIndex = 11;
             // 
             // btSalvar
             // 
-            this.btSalvar.Location = new System.Drawing.Point(52, 224);
+            this.btSalvar.Location = new System.Drawing.Point(114, 284);
             this.btSalvar.Name = "btSalvar";
             this.btSalvar.Size = new System.Drawing.Size(75, 23);
             this.btSalvar.TabIndex = 12;
             this.btSalvar.Text = "Salvar";
             this.btSalvar.UseVisualStyleBackColor = true;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(186, 224);
+            this.btCancelar.Location = new System.Drawing.Point(236, 284);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 13;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            // 
+            // tbData
+            // 
+            this.tbData.Location = new System.Drawing.Point(126, 151);
+            this.tbData.Name = "tbData";
+            this.tbData.Size = new System.Drawing.Size(203, 20);
+            this.tbData.TabIndex = 18;
+            // 
+            // rdNormal
+            // 
+            this.rdNormal.AccessibleName = "rdTipo";
+            this.rdNormal.AutoSize = true;
+            this.rdNormal.Checked = true;
+            this.rdNormal.Location = new System.Drawing.Point(126, 192);
+            this.rdNormal.Name = "rdNormal";
+            this.rdNormal.Size = new System.Drawing.Size(58, 17);
+            this.rdNormal.TabIndex = 20;
+            this.rdNormal.TabStop = true;
+            this.rdNormal.Text = "Normal";
+            this.rdNormal.UseVisualStyleBackColor = true;
+            // 
+            // rdEletrica
+            // 
+            this.rdEletrica.AccessibleName = "rdTipo";
+            this.rdEletrica.AutoSize = true;
+            this.rdEletrica.Location = new System.Drawing.Point(218, 192);
+            this.rdEletrica.Name = "rdEletrica";
+            this.rdEletrica.Size = new System.Drawing.Size(60, 17);
+            this.rdEletrica.TabIndex = 21;
+            this.rdEletrica.Text = "Elétrica";
+            this.rdEletrica.UseVisualStyleBackColor = true;
+            // 
+            // cbLocais
+            // 
+            this.cbLocais.FormattingEnabled = true;
+            this.cbLocais.Location = new System.Drawing.Point(124, 228);
+            this.cbLocais.Name = "cbLocais";
+            this.cbLocais.Size = new System.Drawing.Size(205, 21);
+            this.cbLocais.TabIndex = 22;
+            this.cbLocais.SelectedIndexChanged += new System.EventHandler(this.TelaCadastroBicicleta_Load);
             // 
             // TelaCadastroBicicleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 276);
+            this.ClientSize = new System.Drawing.Size(407, 319);
+            this.Controls.Add(this.cbLocais);
+            this.Controls.Add(this.rdEletrica);
+            this.Controls.Add(this.rdNormal);
+            this.Controls.Add(this.tbData);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btSalvar);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbCod);
+            this.Controls.Add(this.tbModelo);
+            this.Controls.Add(this.tbMarca);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -196,13 +217,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbMarca;
+        private System.Windows.Forms.TextBox tbModelo;
+        private System.Windows.Forms.TextBox tbCod;
         private System.Windows.Forms.Button btSalvar;
         private System.Windows.Forms.Button btCancelar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox tbData;
+        private System.Windows.Forms.RadioButton rdNormal;
+        private System.Windows.Forms.RadioButton rdEletrica;
+        private System.Windows.Forms.ComboBox cbLocais;
     }
 }

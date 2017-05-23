@@ -41,7 +41,7 @@
             this.dgBicicletas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBicicletas.Location = new System.Drawing.Point(12, 25);
             this.dgBicicletas.Name = "dgBicicletas";
-            this.dgBicicletas.Size = new System.Drawing.Size(753, 269);
+            this.dgBicicletas.Size = new System.Drawing.Size(657, 269);
             this.dgBicicletas.TabIndex = 0;
             // 
             // btAdicionar
@@ -56,7 +56,7 @@
             // 
             // btAtualizar
             // 
-            this.btAtualizar.Location = new System.Drawing.Point(690, 321);
+            this.btAtualizar.Location = new System.Drawing.Point(581, 321);
             this.btAtualizar.Name = "btAtualizar";
             this.btAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btAtualizar.TabIndex = 2;
@@ -86,7 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 364);
+            this.ClientSize = new System.Drawing.Size(688, 364);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btAtualizar);

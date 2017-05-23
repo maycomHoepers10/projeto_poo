@@ -10,5 +10,10 @@ namespace Bike.Negocio
     {
         public long Cod { get; set; }
         public String Nome { get; set; }
+
+        public static string GetValue(string name)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

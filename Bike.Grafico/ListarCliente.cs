@@ -16,6 +16,22 @@ namespace Bike.Grafico
         public ListarCliente()
         {
             InitializeComponent();
+            ConfigurarDg();
+        }
+
+
+        private void ConfigurarDg()
+        {
+            dgClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgClientes.ColumnCount = 2;
+            dgClientes.ColumnHeadersVisible = true;
+            dgClientes.Columns[0].Name = "CPF";
+            dgClientes.Columns[0].DataPropertyName = "Cpf";
+            dgClientes.Columns[1].Name = "Nome";
+            dgClientes.Columns[1].DataPropertyName = "Nome";
+
+            dgClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
         }
 
         private void CarregarDados()
@@ -37,6 +53,7 @@ namespace Bike.Grafico
         private void btAdicionar_Click(object sender, EventArgs e)
         {
             TelaCadastroCliente cadastro = new TelaCadastroCliente();
+            cadastro.FormClosed += Tela_FormClosed;
             cadastro.MdiParent = this.MdiParent;
             cadastro.Show();
         }

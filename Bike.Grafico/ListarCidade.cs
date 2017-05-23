@@ -16,9 +16,22 @@ namespace Bike.Grafico
         public ListarCidade()
         {
             InitializeComponent();
+            ConfigurarDg();
         }
 
-        private void AtualizarDados()
+        private void ConfigurarDg()
+        {
+            dgCidades.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgCidades.ColumnCount = 2;
+            dgCidades.ColumnHeadersVisible = true;
+            dgCidades.Columns[0].Name = "Código";
+            dgCidades.Columns[0].DataPropertyName = "Cod";
+            dgCidades.Columns[1].Name = "Cidade";
+            dgCidades.Columns[1].DataPropertyName = "Nome";
+            dgCidades.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void CarregarDados()
         {
             List<Cidade> cidades = Util.Gerenciador.CidadesCadastradas();
             dgCidades.DataSource = cidades;
@@ -26,21 +39,26 @@ namespace Bike.Grafico
 
         private void ListarCidade_Load(object sender, EventArgs e)
         {
-            AtualizarDados();
+           CarregarDados();
         }
 
         private void btAdicionar_Click(object sender, EventArgs e)
         {
             TelaAdicionarCidade cadastro = new TelaAdicionarCidade();
+            cadastro.FormClosed += Tela_FormClosed;
             cadastro.MdiParent = this.MdiParent;
             cadastro.Show();
         }
 
-        private void dgListarCidade_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+        private void Tela_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            CarregarDados();
         }
 
-        
+        private void btAtualizar_Click(object sender, EventArgs e)
+        {
+            CarregarDados();
+        }
     }
 }
