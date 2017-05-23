@@ -20,6 +20,20 @@
       <DataCompra>2015-01-10T00:10:00</DataCompra>
       <Tipo>Normal</Tipo>
     </Bicicleta>
+    <Bicicleta>
+      <Cod>2</Cod>
+      <Marca>Honda</Marca>
+      <Modelo>NFGD</Modelo>
+      <DataCompra>2005-01-10T00:10:00</DataCompra>
+      <Tipo>Normal</Tipo>
+    </Bicicleta>
+    <Bicicleta>
+      <Cod>3</Cod>
+      <Marca>Suzi</Marca>
+      <Modelo>NMS</Modelo>
+      <DataCompra>2008-01-15T00:05:00</DataCompra>
+      <Tipo>Elétrica</Tipo>
+    </Bicicleta>
   </Bicicletas>
   <Cidades>
     <Cidade>
@@ -55,6 +69,18 @@
       </Cidade>
       <vlBikeNormal>15</vlBikeNormal>
       <vlBikeEletrica>30</vlBikeEletrica>
+    </Local>
+    <Local>
+      <Cod>0</Cod>
+      <Codigo>2</Codigo>
+      <nmLocal>2asdfas</nmLocal>
+      <Endereco>fsdfdsa</Endereco>
+      <Cidade>
+        <Cod>1</Cod>
+        <Nome>Joinville</Nome>
+      </Cidade>
+      <vlBikeNormal>15</vlBikeNormal>
+      <vlBikeEletrica>20</vlBikeEletrica>
     </Local>
   </Locais>
   <Alugueis />

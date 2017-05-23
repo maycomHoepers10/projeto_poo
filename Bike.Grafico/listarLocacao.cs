@@ -13,23 +13,36 @@ namespace Bike.Grafico
 {
     public partial class listarLocacao : Form
     {
+        public object Nome { get; private set; }
+
         public listarLocacao()
         {
             InitializeComponent();
-            ConfigurarDg();
+         //  ConfigurarDg();
         }
+
 
 
         private void ConfigurarDg()
         {
             dgLocacoes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
+
             dgLocacoes.MultiSelect = false;
-            dgLocacoes.ColumnCount = 2;
+            dgLocacoes.ColumnCount = 5;
             dgLocacoes.ColumnHeadersVisible = true;
             dgLocacoes.Columns[0].Name = "Identificador";
             dgLocacoes.Columns[0].DataPropertyName = "Codigo";
             dgLocacoes.Columns[1].Name = "Local";
             dgLocacoes.Columns[1].DataPropertyName = "nmLocal";
+            dgLocacoes.Columns[2].Name = "Endereço";
+            dgLocacoes.Columns[2].DataPropertyName = "Endereco";
+        //    dgLocacoes.Columns[3].Name = "Cidade";
+         //   dgLocacoes.Columns[3].DataPropertyName = "C";
+            dgLocacoes.Columns[3].Name = "Valor Normal";
+            dgLocacoes.Columns[3].DataPropertyName = "vlBikeNormal";
+            dgLocacoes.Columns[4].Name = "Valor Elétrica";
+            dgLocacoes.Columns[4].DataPropertyName = "vlBikeEletrica";
             dgLocacoes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgLocacoes.SelectionChanged += DgLocacoes_SelectionChanged;
         }
@@ -43,6 +56,7 @@ namespace Bike.Grafico
         {
             List<Local> locais = Util.Gerenciador.LocaisCadastrados();
             dgLocacoes.DataSource = locais;
+
         }
 
         private void btAtualizar_Click(object sender, EventArgs e)

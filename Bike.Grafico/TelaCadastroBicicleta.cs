@@ -22,8 +22,8 @@ namespace Bike.Grafico
 
         private void ConfigurarComboBox()
         {
-            cbLocais.DisplayMember = "Nome";
-            cbLocais.ValueMember = "Cod";
+            cbLocais.DisplayMember = "nmLocal";
+            cbLocais.ValueMember = "Codigo";
         }
 
         private void CarregarComboBox()

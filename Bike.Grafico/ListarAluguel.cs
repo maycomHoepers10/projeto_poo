@@ -16,6 +16,24 @@ namespace Bike.Grafico
         public ListarAluguel()
         {
             InitializeComponent();
+            ConfigurarDg();
+        }
+
+
+        private void ConfigurarDg()
+        {
+            dgAlugueis.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgAlugueis.ColumnCount = 6;
+            dgAlugueis.ColumnHeadersVisible = true;
+            dgAlugueis.Columns[0].Name = "Código";
+            dgAlugueis.Columns[0].DataPropertyName = "Cod";
+            dgAlugueis.Columns[1].Name = "Data Retirada";
+            dgAlugueis.Columns[1].DataPropertyName = "DataRetirada";
+            dgAlugueis.Columns[2].Name = "Cliente";
+            dgAlugueis.Columns[2].DataPropertyName = "Cliente";
+            dgAlugueis.Columns[3].Name = "Bicicleta";
+            dgAlugueis.Columns[3].DataPropertyName = "Bicleta";
+            dgAlugueis.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void CarregarDados()
