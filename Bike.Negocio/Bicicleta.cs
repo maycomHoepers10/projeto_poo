@@ -14,5 +14,7 @@ namespace Bike.Negocio
         public DateTime DataCompra { get; set; }
         public String Tipo { get; set; }
         public Local Local { get; set; }
+
+
     }
 }

@@ -74,7 +74,7 @@ namespace Bike.Negocio
         }
 
         /*Bucando código */
-        public Cliente BuscarClientePorCodigo(long cpf)
+        public Cliente BuscarClientePorCodigo(String cpf)
         {
             return this.Clientes
                         .Where(cliente => cliente.CPF.Equals(cpf))
@@ -186,8 +186,10 @@ namespace Bike.Negocio
             this.Salvar();
         }
 
-        public void CadastrarAluguel(Aluguel aluguel)
+        public void CadastrarAluguel(Aluguel alu)
         {
+            Aluguel aluguel = new Aluguel();
+            aluguel = alu;
             if (aluguel == null)
                 throw new Exception("O Aluguel não pode ser nulo");
             if (aluguel.DataRetirada == null || aluguel.DataRetirada == DateTime.MinValue)
@@ -196,7 +198,7 @@ namespace Bike.Negocio
                 throw new Exception("Informe o cliente do aluguel");
             if (aluguel.Bicicleta == null)
                 throw new Exception("Informe a bicicleta");
-            this.Alugueis.Add(aluguel);
+            Alugueis.Add(aluguel);
             this.Salvar();
         }
 

@@ -55,3 +55,4 @@ C:\Users\braz\Desktop\projeto_poo-brazjunior-patch-1\Bike.Grafico\obj\Debug\Bike
 C:\Users\braz\Desktop\projeto_poo-brazjunior-patch-1\Bike.Grafico\obj\Debug\Bike.Grafico.TelaCadastroCliente.resources
 C:\Users\braz\Desktop\projeto_poo-brazjunior-patch-1\Bike.Grafico\obj\Debug\Bike.Grafico.TelaPrincipal.resources
 C:\Users\braz\Desktop\projeto_poo-brazjunior-patch-1\Bike.Grafico\obj\Debug\Bike.Grafico.csproj.GenerateResource.Cache
+C:\Users\Acer\Source\Repos\projeto_poo\Bike.Grafico\obj\Debug\Bike.Grafico.TeleDevolucao.resources

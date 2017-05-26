@@ -114,6 +114,12 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeleDevolucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeleDevolucao.Designer.cs">
+      <DependentUpon>TeleDevolucao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util.cs" />
     <EmbeddedResource Include="ListarAluguel.resx">
       <DependentUpon>ListarAluguel.cs</DependentUpon>
@@ -157,6 +163,12 @@
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeleDevolucao.resx">
+      <DependentUpon>TeleDevolucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Bike.Negocio.Aluguel.datasource" />
+    <None Include="Properties\DataSources\Bike.Negocio.Bicicleta.datasource" />
+    <None Include="Properties\DataSources\Bike.Negocio.Cliente.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

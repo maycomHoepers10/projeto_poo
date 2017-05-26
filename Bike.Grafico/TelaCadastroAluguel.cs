@@ -33,17 +33,27 @@ namespace Bike.Grafico
             try
             {
                 Aluguel aluguel = new Aluguel();
-                aluguel.Cod = CodAlguel;
-                aluguel.DataRetirada = DateTime.ParseExact(tbDataRetirada.Text, "dd/mm/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                aluguel.Cliente = new Cliente();
+                aluguel.Bicicleta = new Bicicleta();
+            
 
-                /*
-                String clienteCpf = (String)cbCliente.SelectedValue;
-                aluguel.Cliente.CPF = Util.Gerenciador.BuscarClientePorCodigo(cbCliente.Text);
-                */
+                aluguel.Cod = CodAlguel;
+                aluguel.DataRetirada = DateTime.ParseExact(tbDataRetirada.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+
+                Cliente cli = new Cliente();
+                Bicicleta bic = new Bicicleta();
+
+
+                String clienteCpf = Convert.ToString(cbCliente.SelectedValue);
+                cli = Util.Gerenciador.BuscarClientePorCodigo(clienteCpf);
+                aluguel.Cliente = cli;
 
                 Int64 bicicletaCod = (Int64)cbBicicleta.SelectedValue;
                 aluguel.Bicicleta = Util.Gerenciador.BuscarBicicletaPorCodigo(bicicletaCod);
 
+                Util.Gerenciador.CadastrarAluguel(aluguel);
+                MessageBox.Show("Bicicleta Cadastrada com Sucesso!");
                 this.Close();
             } catch(Exception ex)
             {

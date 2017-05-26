@@ -16,14 +16,14 @@ namespace Bike.Grafico
         public ListarAluguel()
         {
             InitializeComponent();
-            ConfigurarDg();
+          //  ConfigurarDg();
         }
 
 
         private void ConfigurarDg()
         {
             dgAlugueis.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgAlugueis.ColumnCount = 6;
+          //  dgAlugueis.ColumnCount = 6;
             dgAlugueis.ColumnHeadersVisible = true;
             dgAlugueis.Columns[0].Name = "Código";
             dgAlugueis.Columns[0].DataPropertyName = "Cod";
@@ -32,7 +32,7 @@ namespace Bike.Grafico
             dgAlugueis.Columns[2].Name = "Cliente";
             dgAlugueis.Columns[2].DataPropertyName = "Cliente";
             dgAlugueis.Columns[3].Name = "Bicicleta";
-            dgAlugueis.Columns[3].DataPropertyName = "Bicleta";
+            dgAlugueis.Columns[3].DataPropertyName = "Bicleta.Nome";
             dgAlugueis.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
@@ -64,6 +64,15 @@ namespace Bike.Grafico
         private void Tela_FormClosed(object sender, FormClosedEventArgs e)
         {
             CarregarDados();
+        }
+
+        private void btDevolver_Click(object sender, EventArgs e)
+        {
+            if (dgAlugueis.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um pedido");
+                return;
+            }
         }
     }
 }
