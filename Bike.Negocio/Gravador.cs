@@ -19,11 +19,11 @@ namespace Bike.Negocio
                            List<Aluguel> alugueis)
         {
             DadosGravador dados = new DadosGravador();
+            dados.Alugueis = alugueis;
             dados.Clientes = clientes;
             dados.Bicicletas = bicicletas;
             dados.Cidades = cidades;
             dados.Locais = locais;
-            dados.Alugueis = alugueis;
 
             StreamWriter arquivo = new StreamWriter(NomeArquivo);
             XmlSerializer serializer = new XmlSerializer(typeof(DadosGravador));

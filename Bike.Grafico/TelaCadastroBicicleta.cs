@@ -36,8 +36,6 @@ namespace Bike.Grafico
         {
             CarregarComboBox();
             List<Bicicleta> bicicletas = Util.Gerenciador.BicicletasCadastradas();
-            var novoCod = bicicletas.Max(bicicleta => bicicleta.Cod) + 1;
-            tbCod.Text = novoCod.ToString();
         }
 
         private void btSalvar_Click(object sender, EventArgs e)
